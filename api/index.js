@@ -7,10 +7,10 @@ const path = require('path');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_dummy');
 
 // Modular Imports
-const db = require('./models/db');
-const { sendEmailLog } = require('./utils/email');
-const authRoutes = require('./routes/authRoutes');
-const userRoutes = require('./routes/userRoutes');
+const db = require('../models/db');
+const { sendEmailLog } = require('../utils/email');
+const authRoutes = require('../routes/authRoutes');
+const userRoutes = require('../routes/userRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -22,17 +22,17 @@ app.use(cookieParser());
 // Custom middleware to serve mask.html as a fallback for missing .html files (Universal Product Template)
 app.use((req, res, next) => {
     if (req.path.endsWith('.html')) {
-        const filePath = path.join(__dirname, 'public', req.path);
+        const filePath = path.join(__dirname, '..', 'public', req.path);
         if (!fs.existsSync(filePath)) {
             // Serve the master product template instead of 404
-            return res.sendFile(path.join(__dirname, 'public', 'product.html'));
+            return res.sendFile(path.join(__dirname, '..', 'public', 'product.html'));
 
         }
     }
     next();
 });
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // ==========================================
 // API ROUTES
