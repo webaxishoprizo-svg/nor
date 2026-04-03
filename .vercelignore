@@ -1,0 +1,4 @@
+.edge-headless/
+*.log
+node_modules/
+.git/

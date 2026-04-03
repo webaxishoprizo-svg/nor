@@ -21,18 +21,30 @@ app.use(cookieParser());
 
 // Custom middleware to serve mask.html as a fallback for missing .html files (Universal Product Template)
 app.use((req, res, next) => {
-    if (req.path.endsWith('.html')) {
-        const filePath = path.join(__dirname, '..', 'public', req.path);
-        if (!fs.existsSync(filePath)) {
-            // Serve the master product template instead of 404
-            return res.sendFile(path.join(__dirname, '..', 'public', 'product.html'));
-
+    try {
+        if (req.path.endsWith('.html')) {
+            const publicPath = path.join(process.cwd(), 'public');
+            const filePath = path.join(publicPath, req.path);
+            if (!fs.existsSync(filePath)) {
+                // Serve the master product template instead of 404
+                const productPath = path.join(publicPath, 'product.html');
+                if (fs.existsSync(productPath)) {
+                    return res.sendFile(productPath);
+                }
+            }
         }
+    } catch (e) {
+        console.error("Static routing error:", e);
     }
     next();
 });
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
+const publicDir = path.join(process.cwd(), 'public');
+if (fs.existsSync(publicDir)) {
+    app.use(express.static(publicDir));
+} else {
+    console.error("CRITICAL: 'public' directory not found at " + publicDir);
+}
 
 // ==========================================
 // API ROUTES
