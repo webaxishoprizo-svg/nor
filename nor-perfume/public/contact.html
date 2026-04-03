@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NOR PERFUME</title>
+    <meta name="description" content="Reach out for VIP support, inquiries, and fragrance guidance.">
+
+    <!-- Open Graph & Social SEO -->
+    <meta property="og:title" content="Contact Us | NOR Perfume">
+    <meta property="og:description" content="Discover the origins and philosophy behind NOR Perfume.">
+    <meta property="og:image" content="https://norperfume.com/assets/images/mask.webp">
+    <meta property="og:url" content="https://norperfume.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon & Touch -->
+    <link rel="apple-touch-icon" href="assets/images/mask.webp">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23c4a35a'%3E✦%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .page-header {
+            padding: 180px 0 80px;
+            text-align: center;
+        }
+
+        .about-content {
+            padding-bottom: 120px;
+        }
+
+        /* Override anchor links for multi-page */
+        .nav-link[href="#experience"],
+        .nav-link[href="#about"] {
+            color: var(--text-p);
+            pointer-events: none;
+        }
+
+        /* Specific about page styling */
+        .story-block {
+            max-width: 800px;
+            margin: 0 auto 100px;
+            text-align: center;
+        }
+
+        .story-block p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-p);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body class="page-about">
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+
+    <!-- ===================== CURSOR ===================== -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <!-- LEFT: Menu & Currency Selector -->
+            <div class="nav-left">
+                <button class="nav-menu-label" aria-label="Open Menu">
+                    <span>Menu</span>
+                    <div class="nav-menu-lines">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+            </div>
+
+            <!-- CENTER: Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/norwhite.webp" alt="NOR Perfume" class="logo-img" loading="lazy">
+            </a>
+
+            <!-- RIGHT: Search, Profile, Cart -->
+            <div class="nav-right">
+                <button class="nav-icon-btn" id="search-btn" aria-label="Search">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                </button>
+                <a href="account.html" class="nav-icon-btn" aria-label="User Account">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </a>
+                <a href="cart.html" class="nav-icon-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mm-inner">
+            <div class="mm-header">
+                <a href="index.html" class="mm-logo"><span class="font-lovelo">NOR</span></a>
+                <button class="mm-close" id="mm-close" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mm-links">
+                <a href="index.html" class="mm-link">Home</a>
+                <a href="collections.html" class="mm-link">Products</a>
+                <a href="about.html" class="mm-link">About Us</a>
+                <a href="track-order.html" class="mm-link">Track My Order</a>
+            </div>
+
+            <div class="mm-footer">
+                <a href="profile.html" class="mm-link"
+                    style="display:block; margin-bottom:1.5rem; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color: var(--c-gold);">Profile
+                    / Login</a>
+                <p>Luxury Car Fragrances</p>
+                <div class="social-row">
+                    <a href="https://www.instagram.com/norperfumeofficial/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main id="main-content">
+        <header class="page-header">
+            <div class="container">
+                <span class="eyebrow fade-up">Concierge Support</span>
+                <h1 class="sec-title fade-up">Get in <span class="font-lovelo">Touch</span></h1>
+            </div>
+        </header>
+
+        <section class="contact-grid-section">
+            <div class="container">
+                <div class="contact-split">
+                    <!-- Left: Form -->
+                    <div class="contact-form-wrap glass fade-up">
+                        <h2 class="form-title">Send us a message</h2>
+                        <form id="contact-form" class="premium-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>NAME</label>
+                                    <input type="text" name="contact[name]" placeholder="Your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>EMAIL</label>
+                                    <input type="email" name="contact[email]" placeholder="you@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>SUBJECT</label>
+                                <input type="text" name="contact[subject]"
+                                    placeholder="Order inquiry, product question, etc." required>
+                            </div>
+                            <div class="form-group">
+                                <label>MESSAGE</label>
+                                <textarea name="contact[body]" rows="5" placeholder="Tell us how we can help..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="cta-primary btn-send">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" style="margin-right: 8px;">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                                </svg>
+                                <span>SEND MESSAGE</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Info -->
+                    <div class="contact-info-wrap fade-up">
+                        <div class="info-card glass">
+                            <div class="info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <path d="M22 6l-10 7L2 6" />
+                                </svg>
+                            </div>
+                            <div class="info-body">
+                                <span class="info-label">EMAIL</span>
+                                <a href="mailto:norperfume.in@gmail.com" class="info-value">norperfume.in@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass">
+                            <div class="info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <div class="info-body">
+                                <span class="info-label">PHONE</span>
+                                <a href="tel:+919544290206" class="info-value">+91 9544290206</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass">
+                            <div class="info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div class="info-body">
+                                <span class="info-label">ADDRESS</span>
+                                <p class="info-value">Door No: 5/52 Kodibail, Mangalpady Gram Panchayth, Uppala, Kasargod - 671322, Kerala
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass">
+                            <div class="info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </div>
+                            <div class="info-body">
+                                <span class="info-label">SUPPORT HOURS</span>
+                                <p class="info-value">Mon–Sat: 9:00 AM – 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Map Section -->
+        <section class="location-map-section fade-up">
+            <div class="container">
+                <div class="map-frame glass">
+                    <iframe
+                        src="https://www.google.com/maps?q=Door%20No%3A%205%2F52%20Kodibail%2C%20Mangalpady%20Gram%20Panchayth%2C%20Uppala%2C%20Kasargod%20-%20671322%2C%20Kerala&z=15&output=embed"
+                        width="100%" height="450" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="map-overlay">
+                        <div class="map-info-box">
+                            <div class="map-info-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong></strong>
+                                <p>Door No: 5/52 Kodibail, Uppala, Kasargod</p>
+                            </div>
+                        </div>
+                        <a href="https://goo.gl/maps/xyz" target="_blank" class="map-btn">Open in Maps ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer" id="about">
+
+        <!-- Trust badges -->
+        <div class="footer-trust">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-card fade-up" data-delay="0">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M394.33-117.67 298-298.33l-181.33-97 63-62.67 147 26.33L442-546.33 118.33-684l76-76.67L586.67-692l130-130q21.66-21.67 52.66-21.67 31 0 52.67 21.67t21.67 52.5q0 30.83-21.67 52.5L691.67-586.67l68.66 392L684-118.33 546-442 431.33-326.67l26 146-63 63Z" />
+                            </svg>
+                        </div>
+                        <h3>All India Shipping</h3>
+                        <p>Nationwide shipping — fast &amp; reliable</p>
+                    </div>
+                    <div class="trust-card fade-up" data-delay="100"
+                        onclick="window.location.href='mailto:norperfume.help@gmail.com'" style="cursor: pointer;"
+                        title="Email Customer Service">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M440-120v-66.67h333.33V-484q0-121.46-85.38-206.06-85.38-84.61-207.95-84.61t-207.95 84.61q-85.38 84.6-85.38 206.06v244H160q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v62.33q0 27.5-19.58 47.09Q800.83-120 773.33-120H440ZM336.17-416.28q-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5-14.21 0-23.71-9.61Zm240 0q-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5-14.21 0-23.71-9.61ZM241-462q-7-106 64-182t177-76q87.67 0 152.83 57.17Q700-605.67 714-519q-89.67-1-164.17-49.67-74.5-48.66-115.02-129.33Q419-618 367.5-555.5T241-462Z" />
+                            </svg>
+                        </div>
+                        <h3>Customer Service</h3>
+                        <p>Get in touch via <a href="mailto:norperfume.help@gmail.com">norperfume.help@gmail.com</a></p>
+                    </div>
+                    <div class="trust-card fade-up" data-delay="200">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M546.67-426.67q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM240-293.33q-27.5 0-47.08-19.59-19.59-19.58-19.59-47.08v-373.33q0-27.5 19.59-47.09Q212.5-800 240-800h613.33q27.5 0 47.09 19.58Q920-760.83 920-733.33V-360q0 27.5-19.58 47.08-19.59 19.59-47.09 19.59H240ZM333.33-360H760q0-39 27.17-66.17 27.16-27.16 66.16-27.16V-640q-39 0-66.16-27.17Q760-694.33 760-733.33H333.33q0 39-27.16 66.16Q279-640 240-640v186.67q39 0 66.17 27.16Q333.33-399 333.33-360ZM800-160H106.67q-27.5 0-47.09-19.58Q40-199.17 40-226.67V-680h66.67v453.33H800V-160ZM240-360v-373.33V-360Z" />
+                            </svg>
+                        </div>
+                        <h3>Secure Payment</h3>
+                        <p>Your payment information is processed securely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="nl-box fade-up">
+                    <span class="eyebrow">— Keep Me Updated</span>
+                    <div class="nl-icon"></div>
+                    <h3 class="nl-title">Newsletter</h3>
+                    <p class="nl-desc">Subscribe to get notified about product launches, special offers and company
+                        news.</p>
+                    <form class="nl-form" id="nl-form">
+                        <input type="email" placeholder="Your e-mail address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="fb-grid">
+                    <div class="fb-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="assets/images/norwhite.webp" alt="NOR Perfume" class="footer-logo-img"
+                                loading="lazy" style="height: 48px; object-fit: contain;">
+                            <div class="font-lovelo"
+                                style="font-size: 0.9rem; color: var(--c-cream); letter-spacing: 3px;">NOR PERFUME</div>
+                        </a>
+                        <p>Luxury car fragrances crafted for those who drive with purpose.</p>
+                        <div class="social-row" style="display: flex; gap: 16px; margin-top: 20px;">
+                            <a href="https://www.instagram.com/norperfumeofficial/" target="_blank"
+                                aria-label="Instagram"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/norperfumeofficial/" target="_blank" aria-label="Facebook"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/norperfume/" target="_blank" aria-label="LinkedIn"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="fb-links">
+                        <div class="fb-col" id="footer-shop-list">
+                            <h5>Shop</h5>
+                            <a href="collections.html">All Collections</a>
+                        </div>
+
+
+
+                        <div class="fb-col">
+                            <h5>Support</h5>
+                            <a href="about.html">About NOR</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="track-order.html">Track Order</a>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
+
+
+
+                        <div class="fb-col">
+                            <h5>Legal</h5>
+                            <a href="return-policy.html">Return Policy</a>
+                            <a href="shipping-policy.html">Shipping Policy</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="fb-copyright">
+                    <p>© 2026 <span class="font-lovelo">NOR PERFUME</span>. <span
+                            style="text-transform: uppercase; letter-spacing: 3px;">ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script type="module" src="js/shopify-integration.js"></script>
+    <script>
+        const officeLocationQuery = 'Door No: 5/52 Kodibail, Mangalpady Gram Panchayth, Uppala, Kasargod - 671322, Kerala';
+        const mapButton = document.querySelector('.map-btn');
+
+        if (mapButton) {
+            mapButton.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeLocationQuery)}`;
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('.btn-send');
+            const btnText = btn.querySelector('span');
+            const origText = btnText.innerText;
+
+            btnText.innerText = 'SENDING...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            // Simulate Shopify contact form submission delay
+            setTimeout(() => {
+                btnText.innerText = 'SENT ✓';
+                btn.style.background = 'var(--c-gold)';
+                btn.style.color = '#000';
+                this.reset();
+
+                setTimeout(() => {
+                    btnText.innerText = origText;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
+

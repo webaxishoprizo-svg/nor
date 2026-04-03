@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | NOR PERFUME</title>
+    <meta name="description" content="Review your NOR luxury car fragrance selections before checkout.">
+
+    <!-- Open Graph & Social SEO -->
+    <meta property="og:title" content="Shopping Cart | NOR Perfume">
+    <meta property="og:description" content="View your selected NOR luxury car fragrances.">
+    <meta property="og:image" content="https://norperfume.com/assets/images/mask.webp">
+    <meta property="og:url" content="https://norperfume.com/cart.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon & Touch -->
+    <link rel="apple-touch-icon" href="assets/images/norwhite.png">
+    <link rel="icon" type="image/png" href="assets/images/norwhite.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Smooth Scroll: Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+
+    <!-- Performance: Preconnect to Shopify -->
+    <link rel="preconnect" href="https://nor-perfume-2.myshopify.com" crossorigin>
+    <link rel="dns-prefetch" href="https://nor-perfume-2.myshopify.com">
+</head>
+
+<body class="page-cart">
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+
+    <!-- ===================== CURSOR ===================== -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <!-- LEFT: Menu & Currency Selector -->
+            <div class="nav-left">
+                <button class="nav-menu-label" aria-label="Open Menu">
+                    <span>Menu</span>
+                    <div class="nav-menu-lines">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+            </div>
+
+            <!-- CENTER: Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/norwhite.webp" alt="NOR Perfume" class="logo-img" loading="lazy">
+            </a>
+
+            <!-- RIGHT: Search, Profile, Cart -->
+            <div class="nav-right">
+                <button class="nav-icon-btn" id="search-btn" aria-label="Search">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                </button>
+                <a href="https://nor-perfume-2.myshopify.com/account" class="nav-icon-btn" aria-label="User Account">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </a>
+                <a href="cart.html" class="nav-icon-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-count" id="cart-count">2</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mm-inner">
+            <div class="mm-header">
+                <a href="index.html" class="mm-logo"><span class="font-lovelo">NOR</span></a>
+                <button class="mm-close" id="mm-close" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mm-links">
+                <a href="index.html" class="mm-link">Home</a>
+                <a href="collections.html" class="mm-link">Products</a>
+                <a href="about.html" class="mm-link">About Us</a>
+                <a href="track-order.html" class="mm-link">Track My Order</a>
+            </div>
+
+            <div class="mm-footer">
+                <a href="https://nor-perfume-2.myshopify.com/account" class="mm-link"
+                    style="display:block; margin-bottom:1.5rem; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color: var(--c-gold);">Login
+                    / Account</a>
+                <p>Luxury Car Fragrances</p>
+                <div class="social-row">
+                    <a href="https://www.instagram.com/norperfumeofficial/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main id="main-content">
+        <div class="hero-media"
+            style="position: absolute; top: 0; left: 0; right: 0; height: 60vh; background: radial-gradient(circle at center top, rgba(196,163,90,0.12) 0%, transparent 70%); z-index: -1; pointer-events: none;">
+        </div>
+
+        <!-- ===================== CART ===================== -->
+        <header class="page-header-cart text-center"
+            style="position: relative; padding-top: 160px; padding-bottom: 20px;">
+            <div class="container">
+                <span class="eyebrow fade-up" style="margin-bottom: 12px;"><span class="font-lovelo">NOR
+                        PERFUME</span></span>
+                <h1 class="sec-title fade-up" style="font-size: clamp(2.5rem, 4vw, 3.5rem);">Your Selection</h1>
+            </div>
+        </header>
+
+        <section class="cart-section">
+            <div class="container">
+                <!-- Premium Subtitle -->
+                <div
+                    style="margin-bottom: 60px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 24px;">
+                    <p
+                        style="font-family: var(--sans); font-size: 0.8rem; color: var(--c-silver); margin-bottom: 0px; letter-spacing: 3px; text-transform: uppercase;">
+                        Your <strong style="color: var(--c-gold); font-weight: 500;">Premium</strong> Olfactory
+                        Collection</p>
+                </div>
+
+                <div class="cart-layout">
+                    <!-- Premium Cart Items List (Dynamically Injected) -->
+                    <div class="cart-items-container fade-up" id="cart-items-container" data-delay="100">
+                        <!-- Dynamic Items Injected Here -->
+                    </div>
+
+                    <!-- Empty Cart Message (Hidden by default) -->
+                    <div id="empty-cart-message" style="display: none; padding: 60px 0; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 20px; color: var(--c-gold); opacity: 0.5;">✦</div>
+                        <h3 style="font-family: var(--serif); font-size: 2rem; margin-bottom: 12px;">Your Selection is
+                            Empty</h3>
+                        <p style="color: var(--c-silver); margin-bottom: 30px;">It seems you haven't discovered your
+                            perfect scent yet.</p>
+                        <a href="collections.html" class="cta-primary" style="display: inline-flex;">Discover
+                            Collections</a>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="cart-summary glass fade-up" data-delay="200">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span class="summary-subtotal" id="summary-subtotal">₹2,998</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+
+                        <!-- Promo Code Field -->
+                        <div class="promo-box"
+                            style="display: flex; gap: 8px; margin: 24px 0; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 24px;">
+                            <input type="text" placeholder="Promo code"
+                                style="flex: 1; padding: 12px 16px; background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; color: var(--c-text); font-family: var(--sans); font-size: 0.9rem; outline: none;">
+                            <button class="cta-ghost"
+                                style="padding: 0 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Apply</button>
+                        </div>
+
+                        <div class="summary-row summary-total">
+                            <span>Total</span>
+                            <span class="summary-final-total" id="summary-final-total">₹2,998</span>
+                        </div>
+
+                        <button class="btn-checkout cta-primary" id="btn-real-checkout"
+                            style="width: 100%; justify-content: center; padding: 18px; font-size: 1rem;">
+                            Secure Checkout
+                        </button>
+
+                        <div
+                            style="margin-top: 24px; text-align: center; color: var(--c-silver); font-size: 0.8rem; display: flex; flex-direction: column; gap: 8px;">
+                            <span>Over 2,000+ luxury shipments securely delivered.</span>
+                            <div
+                                style="display: flex; justify-content: center; gap: 12px; margin-top: 8px; opacity: 0.7;">
+                                <span
+                                    style="font-weight: bold; border: 1px solid rgba(0,0,0,0.2); padding: 2px 8px; border-radius: 4px;">VISA</span>
+                                <span
+                                    style="font-weight: bold; border: 1px solid rgba(0,0,0,0.2); padding: 2px 8px; border-radius: 4px;">
+                                    Pay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== YOU MAY ALSO LIKE ===================== -->
+        <section class="suggestions-section"
+            style="padding: 80px 0 100px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="eyebrow"
+                        style="margin-bottom: 12px; font-family: var(--sans); letter-spacing: 2px;">Curated for
+                        you</span>
+                    <h2 class="sec-title" style="font-size: 2.5rem; margin-bottom: 40px;">You May Also Like</h2>
+                </div>
+
+                <div class="product-grid" id="shopify-suggestions-grid">
+                    <!-- Dynamic suggestions from Shopify will be loaded here -->
+                    <div class="loader-placeholder"
+                        style="grid-column: 1/-1; text-align: center; color: var(--c-silver); padding: 40px;">
+                        Loading curated suggestions...
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="about">
+
+        <!-- Trust badges -->
+        <div class="footer-trust">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-card fade-up" data-delay="0">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M394.33-117.67 298-298.33l-181.33-97 63-62.67 147 26.33L442-546.33 118.33-684l76-76.67L586.67-692l130-130q21.66-21.67 52.66-21.67 31 0 52.67 21.67t21.67 52.5q0 30.83-21.67 52.5L691.67-586.67l68.66 392L684-118.33 546-442 431.33-326.67l26 146-63 63Z" />
+                            </svg>
+                        </div>
+                        <h3>All India Shipping</h3>
+                        <p>Nationwide shipping — fast &amp; reliable</p>
+                    </div>
+                    <div class="trust-card fade-up" data-delay="100"
+                        onclick="window.location.href='mailto:norperfume.help@gmail.com'" style="cursor: pointer;"
+                        title="Email Customer Service">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M440-120v-66.67h333.33V-484q0-121.46-85.38-206.06-85.38-84.61-207.95-84.61t-207.95 84.61q-85.38 84.6-85.38 206.06v244H160q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v62.33q0 27.5-19.58 47.09Q800.83-120 773.33-120H440ZM336.17-416.28q-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5-14.21 0-23.71-9.61Zm240 0q-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5-14.21 0-23.71-9.61ZM241-462q-7-106 64-182t177-76q87.67 0 152.83 57.17Q700-605.67 714-519q-89.67-1-164.17-49.67-74.5-48.66-115.02-129.33Q419-618 367.5-555.5T241-462Z" />
+                            </svg>
+                        </div>
+                        <h3>Customer Service</h3>
+                        <p>Get in touch via <a href="mailto:norperfume.help@gmail.com">norperfume.help@gmail.com</a></p>
+                    </div>
+                    <div class="trust-card fade-up" data-delay="200">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M546.67-426.67q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM240-293.33q-27.5 0-47.08-19.59-19.59-19.58-19.59-47.08v-373.33q0-27.5 19.59-47.09Q212.5-800 240-800h613.33q27.5 0 47.09 19.58Q920-760.83 920-733.33V-360q0 27.5-19.58 47.08-19.59 19.59-47.09 19.59H240ZM333.33-360H760q0-39 27.17-66.17 27.16-27.16 66.16-27.16V-640q-39 0-66.16-27.17Q760-694.33 760-733.33H333.33q0 39-27.16 66.16Q279-640 240-640v186.67q39 0 66.17 27.16Q333.33-399 333.33-360ZM800-160H106.67q-27.5 0-47.09-19.58Q40-199.17 40-226.67V-680h66.67v453.33H800V-160ZM240-360v-373.33V-360Z" />
+                            </svg>
+                        </div>
+                        <h3>Secure Payment</h3>
+                        <p>Your payment information is processed securely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="nl-box fade-up">
+                    <span class="eyebrow">— Keep Me Updated</span>
+                    <div class="nl-icon"></div>
+                    <h3 class="nl-title">Newsletter</h3>
+                    <p class="nl-desc">Subscribe to get notified about product launches, special offers and company
+                        news.</p>
+                    <form class="nl-form" id="nl-form">
+                        <input type="email" placeholder="Your e-mail address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="fb-grid">
+                    <div class="fb-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="assets/images/norwhite.webp" alt="NOR Perfume" class="footer-logo-img"
+                                loading="lazy" style="height: 48px; object-fit: contain;">
+                            <div class="font-lovelo"
+                                style="font-size: 0.9rem; color: var(--c-cream); letter-spacing: 3px;">NOR PERFUME</div>
+                        </a>
+                        <p>Luxury car fragrances crafted for those who drive with purpose.</p>
+                        <div class="social-row" style="display: flex; gap: 16px; margin-top: 20px;">
+                            <a href="https://www.instagram.com/norperfumeofficial/" target="_blank"
+                                aria-label="Instagram"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/norperfumeofficial/" target="_blank" aria-label="Facebook"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/norperfume/" target="_blank" aria-label="LinkedIn"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="fb-links">
+                        <div class="fb-col" id="footer-shop-list">
+                            <h5>Shop</h5>
+                            <a href="collections.html">All Collections</a>
+                        </div>
+
+
+
+                        <div class="fb-col">
+                            <h5>Support</h5>
+                            <a href="about.html">About NOR</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="track-order.html">Track Order</a>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
+
+
+
+                        <div class="fb-col">
+                            <h5>Legal</h5>
+                            <a href="return-policy.html">Return Policy</a>
+                            <a href="shipping-policy.html">Shipping Policy</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="fb-copyright">
+                    <p>© 2026 <span class="font-lovelo">NOR PERFUME</span>. <span
+                            style="text-transform: uppercase; letter-spacing: 3px;">ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script src="js/main.js" defer></script>
+    <script type="module" src="js/shopify-integration.js"></script>
+</body>
+
+</html>

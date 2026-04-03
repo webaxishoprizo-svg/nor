@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | NOR PERFUME</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body style="background: var(--c-bg); color: var(--c-cream); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; margin: 0;">
+    <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--g-bdr); padding: 50px 30px; border-radius: 12px; max-width: 500px;">
+        <h1 style="font-family: var(--serif); color: var(--c-gold); font-size: 2.5rem; margin-bottom: 20px;">Payment Successful</h1>
+        <p style="font-size: 1.1rem; color: var(--c-silver); margin-bottom: 30px; line-height: 1.6;">Thank you for your order. Your luxury car fragrance is being prepared for dispatch.</p>
+        <a href="index.html" class="btn-primary" style="display: inline-block;">Return to Home</a>
+    </div>
+    <script>
+        // Clear the cart specifically on success
+        localStorage.removeItem('nor_shopify_cart_id');
+    </script>
+</body>
+
+</html>

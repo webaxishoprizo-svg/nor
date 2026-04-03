@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | NOR Perfume</title>
+    <meta name="description" content="Luxury Car Fragrances crafted for sophistication.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Smooth Scroll: Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+
+    <!-- Performance: Preconnect to Shopify -->
+    <link rel="preconnect" href="https://nor-perfume-2.myshopify.com" crossorigin>
+    <link rel="dns-prefetch" href="https://nor-perfume-2.myshopify.com">
+</head>
+
+<body class="page-pdp">
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+
+    <!-- ===================== CURSOR ===================== -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <!-- LEFT: Menu & Currency Selector -->
+            <div class="nav-left">
+                <button class="nav-menu-label" aria-label="Open Menu">
+                    <span>Menu</span>
+                    <div class="nav-menu-lines">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- CENTER: Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/norwhite.webp" alt="NOR Perfume" class="logo-img" loading="lazy">
+            </a>
+
+            <!-- RIGHT: Search, Profile, Cart -->
+            <div class="nav-right">
+                <button class="nav-icon-btn" id="search-btn" aria-label="Search">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                </button>
+                <a href="account.html" class="nav-icon-btn" aria-label="User Account">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </a>
+                <a href="cart.html" class="nav-icon-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mm-inner">
+            <div class="mm-header">
+                <a href="index.html" class="mm-logo"><span class="font-lovelo">NOR</span></a>
+                <button class="mm-close" id="mm-close" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mm-links">
+                <a href="index.html" class="mm-link">Home</a>
+                <a href="collections.html" class="mm-link">Products</a>
+                <a href="about.html" class="mm-link">About Us</a>
+                <a href="track-order.html" class="mm-link">Track My Order</a>
+            </div>
+
+            <div class="mm-footer">
+                <a href="account.html" class="mm-link"
+                    style="display:block; margin-bottom:1.5rem; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color: var(--c-gold);">Login
+                    / Account</a>
+                <p>Luxury Car Fragrances</p>
+                <div class="social-row">
+                    <a href="https://www.instagram.com/norperfumeofficial/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- 1. HERO: GALLERY + INFO (PREMIUM DESIGN FROM MASK.HTML) -->
+        <section class="pdp-wrapper page-header-pdp" style="padding-top: 140px; padding-bottom: 60px;">
+            <div class="container">
+                <a href="collections.html" class="fade-up"
+                    style="display: inline-flex; align-items: center; gap: 8px; color: var(--c-silver); font-size: 0.9rem; margin-bottom: 32px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">
+                    <span style="font-size: 1.2rem;">←</span> Back to fragrances
+                </a>
+
+                <div class="pdp-layout"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                    <!-- Gallery -->
+                    <div class="pdp-gallery fade-up" style="position: sticky; top: 120px;">
+                        <div class="glass"
+                            style="aspect-ratio: 4/5; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E"
+                                alt="Loading..." class="pdp-gallery-main" id="pdp-gallery-main"
+                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease;">
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="pdp-info glass fade-up" data-delay="100"
+                        style="padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 16px 40px rgba(0,0,0,0.4);">
+                        <div class="eyebrow-pdp" id="pdp-category"
+                            style="font-size: 0.75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--c-gold); margin-bottom: 12px;">
+                            Premium Category</div>
+                        <h1 class="pdp-title" id="pdp-title"
+                            style="font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 8px; text-transform: uppercase;">
+                            Loading...</h1>
+                        <div class="product-pdt-sub" id="pdp-sub"
+                            style="font-size: 1.1rem; font-style: italic; color: var(--c-silver); margin-bottom: 24px; font-family: var(--serif);">
+                            Signature Drop</div>
+
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 32px;">
+                            <span style="color: var(--c-gold); font-size: 1.1rem; letter-spacing: 2px;">★★★★★</span>
+                            <span style="font-size: 0.9rem; color: var(--c-silver);">4.9 · Verified Reviews</span>
+                        </div>
+
+                        <div style="height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 32px;"></div>
+
+                        <div class="pdp-description body-copy" id="pdp-description"
+                            style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 40px; color: var(--c-cream);">
+                            Fetching product details from Shopify...
+                        </div>
+
+                        <!-- Dynamic Tags for Scent Profile -->
+                        <div
+                            style="font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--c-silver); margin-bottom: 16px;">
+                            Scent profile</div>
+                        <div class="pdp-tags" id="pdp-tags"
+                            style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px;">
+                            <span
+                                style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 6px 12px; border: 1px solid rgba(196,163,90,0.3); border-radius: 4px; color: var(--c-cream);">Aromatic</span>
+                        </div>
+
+                        <div
+                            style="font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--c-silver); margin-bottom: 16px;">
+                            What's in the box</div>
+                        <div id="pdp-whats-in-box" style="margin-bottom: 40px;">
+                            <div
+                                style="font-size: 0.95rem; color: var(--c-cream); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 12px;">
+                                <span
+                                    style="display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--c-gold);"></span>
+                                20ml fragrance spray
+                            </div>
+                            <div
+                                style="font-size: 0.95rem; color: var(--c-cream); padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                                <span
+                                    style="display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--c-gold);"></span>
+                                1 × NOR luxury diffusion tag
+                            </div>
+                        </div>
+
+                        <div class="pdp-price" id="pdp-price"
+                            style="font-size: 2.3rem; font-family: var(--serif); color: #fff; margin-bottom: 24px;">
+                            ₹0</div>
+
+                        <div class="pdp-cta-group" style="display: flex; gap: 16px; margin-bottom: 16px;">
+                            <button class="cta-primary btn-add-cart" id="btn-add-cart"
+                                style="flex: 1; justify-content: center; padding: 20px; position: relative; z-index: 10;">Add
+                                to Cart</button>
+                            <button class="cta-ghost btn-buy-now" id="btn-buy-now"
+                                style="flex: 1; justify-content: center; padding: 20px; position: relative; z-index: 10;">Buy
+                                Now</button>
+                        </div>
+                        <div
+                            style="text-align: center; font-size: 0.8rem; color: var(--c-silver); letter-spacing: 1px;">
+                            Free shipping above ₹999 · Prepaid only</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. STICKY BUY BAR (Logic in main.js) -->
+        <div class="sticky-buy-bar" id="sticky-buy-bar">
+            <div class="container">
+                <div class="sbb-inner">
+                    <div class="sbb-left">
+                        <img src="" alt="" class="sbb-img">
+                        <div class="sbb-meta">
+                            <div class="sbb-title">Product Name</div>
+                            <div class="sbb-price">₹0</div>
+                        </div>
+                    </div>
+                    <div class="sbb-right">
+                        <button class="cta-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. TRUST SECTION (REQUESTED: SECOND IMAGE) -->
+        <section class="pdp-trust-section">
+            <div class="container">
+                <div class="trust-pill-grid">
+                    <div class="trust-pill fade-up">
+                        <span class="tp-icon">✦</span>
+                        <span>Zero-Liquid Tech</span>
+                    </div>
+                    <div class="trust-pill fade-up" data-delay="100">
+                        <span class="tp-icon">✦</span>
+                        <span>45-Day Duration</span>
+                    </div>
+                    <div class="trust-pill fade-up" data-delay="200">
+                        <span class="tp-icon">✦</span>
+                        <span>Sustainably Sourced</span>
+                    </div>
+                    <div class="trust-pill fade-up" data-delay="300">
+                        <span class="tp-icon">✦</span>
+                        <span>Free National Shipping</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DETAILS ACCORDIONS (REQUESTED: SECOND IMAGE) -->
+        <section class="pdp-details-section">
+            <div class="container">
+                <div class="pdp-details-layout">
+                    <div class="pdp-details-main fade-up">
+                        <div class="accordion-item active">
+                            <div class="accordion-header">
+                                <h3>The Composition</h3>
+                                <div class="accordion-icon"></div>
+                            </div>
+                            <div class="accordion-content">
+                                <p>A harmonious blend of rare botanicals and pure essential oils. Our proprietary
+                                    extraction process ensures the molecules retain their peak potency, delivering a
+                                    scent that evolves as you drive.</p>
+                                <ul class="composition-list">
+                                    <li><strong>Top:</strong> Bergamot & Saffron</li>
+                                    <li><strong>Heart:</strong> Damascena Rose</li>
+                                    <li><strong>Base:</strong> Aged Oud & Leather</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>How to Use</h3>
+                                <div class="accordion-icon"></div>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Gently slide the NOR diffuser onto your vehicle's air vent. The airflow will
+                                    naturally activate the ceramic core, releasing the fragrance. Adjust the air
+                                    intensity to control the diffusion speed.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>Shipping & Returns</h3>
+                                <div class="accordion-icon"></div>
+                            </div>
+                            <div class="accordion-content">
+                                <p>We offer free standard shipping on all orders within India. Due to the personal
+                                    nature of our products, we only accept returns for damaged items within 7 days of
+                                    delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. HOW TO USE VISUALS (PREMIUM SECTION FROM MASK.HTML) -->
+        <section class="panel bg-dark"
+            style="border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 100px 0;">
+            <div class="container fade-up">
+                <h2 class="sec-title" style="text-align: center; margin-bottom: 60px; font-size: 2.5rem;">How to
+                    <em>Use</em>
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+                    <div class="glass"
+                        style="text-align: center; padding: 40px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div
+                            style="font-size: 3rem; font-family: var(--serif); color: rgba(255,255,255,0.1); margin-bottom: 16px;">
+                            01</div>
+                        <h4 style="font-size: 1.1rem; color: var(--c-gold); margin-bottom: 12px;">Spray</h4>
+                        <p style="font-size: 0.9rem; color: var(--c-silver); line-height: 1.6;">Hold bottle 10–15 cm
+                            away and spray evenly onto the NOR tag.</p>
+                    </div>
+                    <div class="glass"
+                        style="text-align: center; padding: 40px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div
+                            style="font-size: 3rem; font-family: var(--serif); color: rgba(255,255,255,0.1); margin-bottom: 16px;">
+                            02</div>
+                        <h4 style="font-size: 1.1rem; color: var(--c-gold); margin-bottom: 12px;">Absorb</h4>
+                        <p style="font-size: 0.9rem; color: var(--c-silver); line-height: 1.6;">Let the tag absorb the
+                            fragrance oils fully.</p>
+                    </div>
+                    <div class="glass"
+                        style="text-align: center; padding: 40px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div
+                            style="font-size: 3rem; font-family: var(--serif); color: rgba(255,255,255,0.1); margin-bottom: 16px;">
+                            03</div>
+                        <h4 style="font-size: 1.1rem; color: var(--c-gold); margin-bottom: 12px;">Hang</h4>
+                        <p style="font-size: 0.9rem; color: var(--c-silver); line-height: 1.6;">Hang the tag on your
+                            rear-view mirror or near an air vent.</p>
+                    </div>
+                    <div class="glass"
+                        style="text-align: center; padding: 40px 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                        <div
+                            style="font-size: 3rem; font-family: var(--serif); color: rgba(255,255,255,0.1); margin-bottom: 16px;">
+                            04</div>
+                        <h4 style="font-size: 1.1rem; color: var(--c-gold); margin-bottom: 12px;">Refresh</h4>
+                        <p style="font-size: 0.9rem; color: var(--c-silver); line-height: 1.6;">When the scent fades,
+                            simply spray again to bring it back.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. REVIEWS -->
+        <section class="pdp-reviews-section">
+            <div class="container">
+                <div class="reviews-header text-center fade-up">
+                    <span class="eyebrow">The Experience</span>
+                    <h2 class="sec-title">Customer <em>Reviews</em></h2>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card glass fade-up">
+                        <div class="rev-stars">★★★★★</div>
+                        <p>"The most sophisticated car fragrance I've ever owned. It actually feels like a perfume."</p>
+                        <div class="rev-author">— Arjun K.</div>
+                        <div
+                            style="margin-top: 12px; font-size: 0.7rem; color: #4CAF50; letter-spacing: 1px; font-weight: 600;">
+                            ✓ VERIFIED PURCHASE</div>
+                    </div>
+                    <div class="review-card glass fade-up" data-delay="100">
+                        <div class="rev-stars">★★★★★</div>
+                        <p>"Beautiful design that fits my car's interior perfectly. Powerful yet never overwhelming."
+                        </p>
+                        <div class="rev-author">— Shreya S.</div>
+                        <div
+                            style="margin-top: 12px; font-size: 0.7rem; color: #4CAF50; letter-spacing: 1px; font-weight: 600;">
+                            ✓ VERIFIED PURCHASE</div>
+                    </div>
+                    <div class="review-card glass fade-up" data-delay="200">
+                        <div class="rev-stars">★★★★★</div>
+                        <p>"Finally a spill-proof solution that actually smells high-end. 10/10 would recommend."</p>
+                        <div class="rev-author">— Rahul M.</div>
+                        <div
+                            style="margin-top: 12px; font-size: 0.7rem; color: #4CAF50; letter-spacing: 1px; font-weight: 600;">
+                            ✓ VERIFIED PURCHASE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. RECOMMENDATIONS (REQUESTED: THIRD IMAGE) -->
+        <section class="suggestions-section pdp-recommendations"
+            style="padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="eyebrow">Curated for you</span>
+                    <h2 class="sec-title" style="margin-top: 10px;">You May <em>Also Like</em></h2>
+                </div>
+                <div class="product-grid-modern" id="shopify-suggestions-grid" style="margin-top: 60px;">
+                    <!-- Dynamic recommendations from Shopify will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="about">
+        <!-- Trust badges -->
+        <div class="footer-trust">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-card fade-up" data-delay="0">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M394.33-117.67 298-298.33l-181.33-97 63-62.67 147 26.33L442-546.33 118.33-684l76-76.67L586.67-692l130-130q21.66-21.67 52.66-21.67 31 0 52.67 21.67t21.67 52.5q0 30.83-21.67 52.5L691.67-586.67l68.66 392L684-118.33 546-442 431.33-326.67l26 146-63 63Z" />
+                            </svg>
+                        </div>
+                        <h3>All India Shipping</h3>
+                        <p>Nationwide shipping — fast &amp; reliable</p>
+                    </div>
+                    <div class="trust-card fade-up" data-delay="100"
+                        onclick="window.location.href='mailto:norperfume.help@gmail.com'" style="cursor: pointer;"
+                        title="Email Customer Service">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M440-120v-66.67h333.33V-484q0-121.46-85.38-206.06-85.38-84.61-207.95-84.61t-207.95 84.61q-85.38 84.6-85.38 206.06v244H160q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v62.33q0 27.5-19.58 47.09Q800.83-120 773.33-120H440ZM336.17-416.28q-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5-14.21 0-23.71-9.61Zm240 0q-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5-14.21 0-23.71-9.61ZM241-462q-7-106 64-182t177-76q87.67 0 152.83 57.17Q700-605.67 714-519q-89.67-1-164.17-49.67-74.5-48.66-115.02-129.33Q419-618 367.5-555.5T241-462Z" />
+                            </svg>
+                        </div>
+                        <h3>Customer Service</h3>
+                        <p>Get in touch via <a href="mailto:norperfume.help@gmail.com">norperfume.help@gmail.com</a></p>
+                    </div>
+                    <div class="trust-card fade-up" data-delay="200">
+                        <div class="trust-ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                                fill="#e3e3e3" style="display: block; margin: 0 auto; margin-bottom: 8px;">
+                                <path
+                                    d="M546.67-426.67q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM240-293.33q-27.5 0-47.08-19.59-19.59-19.58-19.59-47.08v-373.33q0-27.5 19.59-47.09Q212.5-800 240-800h613.33q27.5 0 47.09 19.58Q920-760.83 920-733.33V-360q0 27.5-19.58 47.08-19.59 19.59-47.09 19.59H240ZM333.33-360H760q0-39 27.17-66.17 27.16-27.16 66.16-27.16V-640q-39 0-66.16-27.17Q760-694.33 760-733.33H333.33q0 39-27.16 66.16Q279-640 240-640v186.67q39 0 66.17 27.16Q333.33-399 333.33-360ZM800-160H106.67q-27.5 0-47.09-19.58Q40-199.17 40-226.67V-680h66.67v453.33H800V-160ZM240-360v-373.33V-360Z" />
+                            </svg>
+                        </div>
+                        <h3>Secure Payment</h3>
+                        <p>Your payment information is processed securely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="nl-box fade-up">
+                    <span class="eyebrow">— Keep Me Updated</span>
+                    <div class="nl-icon"></div>
+                    <h3 class="nl-title">Newsletter</h3>
+                    <p class="nl-desc">Subscribe to get notified about product launches, special offers and company
+                        news.</p>
+                    <form class="nl-form" id="nl-form">
+                        <input type="email" placeholder="Your e-mail address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="fb-grid">
+                    <div class="fb-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="assets/images/norwhite.webp" alt="NOR Perfume" class="footer-logo-img"
+                                loading="lazy" style="height: 48px; object-fit: contain;">
+                            <div class="font-lovelo"
+                                style="font-size: 0.9rem; color: var(--c-cream); letter-spacing: 3px;">NOR PERFUME</div>
+                        </a>
+                        <p>Luxury car fragrances crafted for those who drive with purpose.</p>
+                        <div class="social-row" style="display: flex; gap: 16px; margin-top: 20px;">
+                            <a href="https://www.instagram.com/norperfumeofficial/" target="_blank"
+                                aria-label="Instagram"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/norperfumeofficial/" target="_blank" aria-label="Facebook"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/norperfume/" target="_blank" aria-label="LinkedIn"
+                                style="color: var(--c-silver); transition: color 0.3s var(--ease);">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="fb-links">
+                        <div class="fb-col" id="footer-shop-list">
+                            <h5>Shop</h5>
+                            <a href="collections.html">All Collections</a>
+                        </div>
+
+
+
+                        <div class="fb-col">
+                            <h5>Support</h5>
+                            <a href="about.html">About NOR</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="track-order.html">Track Order</a>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
+
+
+
+                        <div class="fb-col">
+                            <h5>Legal</h5>
+                            <a href="return-policy.html">Return Policy</a>
+                            <a href="shipping-policy.html">Shipping Policy</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="fb-copyright">
+                    <p>© 2026 <span class="font-lovelo">NOR PERFUME</span>. <span
+                            style="text-transform: uppercase; letter-spacing: 3px;">ALL RIGHTS RESERVED.</span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/pdp-ui.js" defer></script>
+    <script type="module" src="js/shopify-integration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+/* ============================================================
+   NOR PERFUME — BEST SELLER CAROUSEL (EXACT GYMKHA STYLE)
+   Final high-fidelity spec matching Gymkha.com.
+   ============================================================ */
+
+.best-seller-section {
+    padding: var(--pad-y) 0;
+    /* Reduced from 128px */
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.best-seller-section .container {
+    max-width: 1400px;
+    /* Wider container for better carousel framing */
+}
+
+/* Subtitle & Title Structure */
+.best-seller-section .sec-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.best-seller-section .eyebrow {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 8px;
+    font-family: var(--sans);
+    font-weight: 500;
+}
+
+.best-seller-section .sec-title {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: var(--serif);
+    margin: 0;
+}
+
+/* Carousel Container */
+.bs-carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.bs-carousel-viewport {
+    width: 100%;
+    overflow: visible;
+    padding: 20px 0;
+    cursor: grab;
+}
+
+.bs-carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+/* Slide Cards */
+.bs-card {
+    flex: 0 0 350px;
+    /* Reduced from 420px for compactness */
+    margin-right: 32px;
+    transition: transform 0.6s var(--ease-out), opacity 0.6s ease;
+    opacity: 0.5;
+    transform: scale(0.85);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bs-card.is-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 10;
+}
+
+.bs-card-inner {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    /* Exact Gymkha aspect ratio */
+    border-radius: 24px;
+    /* Increased for premium look */
+    overflow: hidden;
+    background: #000;
+    /* Pure black to match paper vibe */
+    position: relative;
+    box-shadow: var(--premium-shadow);
+    transition: var(--t);
+}
+
+.bs-card:hover .bs-card-inner {
+    box-shadow: var(--premium-shadow-h);
+}
+
+.bs-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bs-img-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bs-offer-badge {
+    top: 18px;
+    right: 18px;
+    z-index: 6;
+}
+
+.bs-card-link-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: block;
+}
+
+.bs-card-actions {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s var(--ease-out);
+    z-index: 5;
+}
+
+.bs-card:hover .bs-card-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bs-quick-add {
+    width: 100%;
+    padding: 12px 20px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bs-quick-add svg {
+    width: 14px;
+    height: 14px;
+}
+
+.bs-quick-add:hover {
+    background: #f0f0f0;
+}
+
+.bs-quick-add.is-unavailable,
+.bs-quick-add:disabled {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.bs-quick-add.loading {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.bs-quick-add.added {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Info Overlay Style */
+.bs-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 24px 24px;
+    text-align: left;
+    /* Changed from center to match reference */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 2;
+}
+
+.bs-card.is-active .bs-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bs-title {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #ffffff;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bs-price {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.bs-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bs-compare-price {
+    font-family: var(--sans);
+    font-size: 0.84rem;
+    color: rgba(255, 255, 255, 0.48);
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    letter-spacing: 0.4px;
+}
+
+/* Nav Controls */
+.bs-controls {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.bs-nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bs-nav-btn:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.bs-nav-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .best-seller-section {
+        padding: var(--pad-y) 0;
+    }
+
+    .bs-offer-badge {
+        top: 14px;
+        right: 14px;
+    }
+
+    .bs-card {
+        flex: 0 0 80vw;
+        /* Mostly fullscreen on mobile */
+        margin-right: 20px;
+    }
+
+    .bs-carousel-viewport {
+        padding: 10px 0;
+    }
+
+    .best-seller-section .sec-title {
+        font-size: 24px;
+    }
+
+    .best-seller-section .sec-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .best-seller-section .cta-mini {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        margin-top: 10px;
+    }
+}

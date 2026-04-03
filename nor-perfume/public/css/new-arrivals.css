@@ -1,0 +1,389 @@
+/* ============================================================
+   NOR PERFUME — NEW ARRIVALS (STACKED SCROLL ANIMATION)
+   Inspired by: bestaudiobrands.com / Awwwards styles
+   ============================================================ */
+
+.new-arrivals-section {
+    position: relative;
+    background: #000;
+    width: 100%;
+    /* Height set by JS dynamically */
+}
+
+.na-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.na-card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.na-card {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--pad-x);
+    background: #000;
+    will-change: transform, opacity;
+}
+
+/* Card Content Structure */
+.na-card-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* LEFT: Story / Info */
+.na-left {
+    flex: 1;
+    padding-right: 60px;
+}
+
+.na-eyebrow {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.na-title {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1;
+    font-weight: 300;
+    margin-bottom: 32px;
+    color: #fff;
+    max-width: 600px;
+}
+
+/* Trust Row for Premium Feel */
+.na-trust-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.na-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-silver);
+}
+
+.nt-icon {
+    color: var(--c-gold);
+    font-size: 0.9rem;
+}
+
+.na-cta-wrap {
+    margin-top: 40px;
+}
+
+/* Price & Story Detail */
+.na-price-tag {
+    font-family: var(--sans);
+    font-size: 1.8rem;
+    color: var(--c-gold);
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.na-price-stack {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.na-price-current {
+    font-size: 2.2rem;
+    font-family: var(--sans);
+    color: var(--c-gold);
+    font-weight: 300;
+}
+
+.na-compare-price {
+    font-family: var(--sans);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.45);
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    letter-spacing: 0.4px;
+}
+
+.na-desc-wrap {
+    margin-bottom: 32px;
+    max-width: 440px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 24px;
+}
+
+.na-desc-text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    font-family: var(--serif);
+    font-style: italic;
+}
+
+.na-button-stack {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .na-button-stack {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.na-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s var(--ease-out);
+}
+
+.na-cta:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.na-quick-add {
+    padding: 14px 32px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.na-quick-add:hover {
+    background: #e0e0e0;
+}
+
+.na-quick-add.is-unavailable,
+.na-quick-add:disabled {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.na-quick-add.loading {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.na-quick-add.added {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* RIGHT: Large Image */
+.na-right {
+    flex: 1;
+    height: 65vh;
+    position: relative;
+    max-width: 700px;
+    margin-left: auto;
+}
+
+.na-img-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.6s var(--ease-out);
+}
+
+.na-img-link:hover .na-img {
+    transform: scale(1.05);
+}
+
+.na-img-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px; /* Increased for premium look */
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--premium-shadow);
+    transition: var(--t);
+}
+
+.na-offer-badge {
+    top: 22px;
+    right: 22px;
+    z-index: 4;
+}
+
+.na-img-link:hover .na-img-frame {
+    box-shadow: var(--premium-shadow-h);
+    transform: translateY(-5px);
+}
+
+.na-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s var(--ease-out);
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+    .na-card-inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+        backdrop-filter: blur(10px);
+        padding: 32px 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.05);
+        height: auto;
+        min-height: 380px;
+    }
+
+    .na-left {
+        padding-right: 0;
+        text-align: left;
+        flex: 1.2;
+    }
+
+    .na-right {
+        flex: 0.8;
+        height: auto;
+        aspect-ratio: 1/1;
+        max-width: 160px; /* More room for text */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .na-img-frame {
+        box-shadow: none; /* Shadow on image instead */
+        background: transparent;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .na-img {
+        object-fit: contain !important;
+        filter: drop-shadow(0 15px 30px rgba(0,0,0,0.8)); /* 3D Product Pop */
+        transform: scale(1.1);
+    }
+
+    .na-eyebrow {
+        font-size: 10px;
+        letter-spacing: 4px;
+        margin-bottom: 12px;
+    }
+
+    .na-title {
+        font-size: 1.6rem !important; /* Slightly more prominent */
+        margin-bottom: 8px !important;
+        letter-spacing: -0.02em;
+    }
+
+    .na-price-tag {
+        font-size: 1.3rem !important;
+        margin-bottom: 24px !important;
+        font-weight: 400;
+    }
+
+    .na-price-current {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .na-compare-price {
+        font-size: 0.82rem;
+    }
+
+    .na-offer-badge {
+        top: 14px;
+        right: 14px;
+    }
+
+    .na-desc-wrap,
+    .na-trust-row {
+        display: none !important;
+    }
+
+    .na-button-stack {
+        gap: 10px;
+    }
+
+    .na-cta {
+        padding: 12px 20px;
+        font-size: 9px;
+        border-radius: 2px;
+    }
+
+    .na-quick-add {
+        padding: 12px 20px;
+        font-size: 9px;
+        border-radius: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .na-sticky-wrapper {
+        height: 100svh;
+        /* More robust for mobile height issues */
+    }
+
+    .na-card {
+        padding: 0 20px;
+    }
+
+    .na-title {
+        font-size: 2.2rem;
+    }
+
+    .na-cta {
+        padding: 15px 30px;
+    }
+
+    .na-right {
+        height: 40vh;
+    }
+}
